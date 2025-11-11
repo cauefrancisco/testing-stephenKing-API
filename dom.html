@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <style>
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    main {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 5rem;
+    }
+
+    .click-me {
+      width: 245px;
+      height: 65px;
+      border: none;
+      background-color: black;
+      outline: gray;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: -2px 5px 5px gray;
+    }
+
+    .result-books {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2.5%;
+      margin-top: 5rem;
+    }
+
+    .book-model {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 26%;
+      min-height: 50vh;
+      height: 100%;
+      margin: 0.5rem;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .info-button {
+      display: none;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #ff4444;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .book-model:hover .info-button {
+      display: inline-block;
+    }
+
+    .book-model:hover {
+      transform: scale(1.02);
+    }
+
+    .book-overlay {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .book-model:hover .book-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<script src="./dom.js"></script>
+
+<body class="body">
+
+  <main style="width: 100%;">
+
+    <button id="click" class="click-me">Search Stephen King`s Books.</button>
+
+    <section id="book-container-section" class="result-books">
+      <div id="book-model" class="book-model">
+
+      </div>
+
+    </section>
+  </main>
+
+
+
+</body>
+
+</html>
